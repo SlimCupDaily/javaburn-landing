@@ -3,228 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Burn™ | Natural Metabolism Booster for Your Coffee</title>
+    <title>Java Burn - Boost Your Metabolism Naturally</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF5E6;
             color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            background-color: #f9f9f9;
+            line-height: 1.6;
         }
         
-        header {
-            background: linear-gradient(135deg, #8e2de2, #4a00e0);
+        .header {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
             color: white;
-            padding: 40px 20px;
             text-align: center;
-            border-radius: 0 0 20px 20px;
-            margin-bottom: 40px;
+            padding: 30px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
         
-        h2 {
-            color: #4a00e0;
-            margin-top: 40px;
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .cta-button {
-            display: inline-block;
-            background-color: #ff6b6b;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
         
-        .cta-button:hover {
-            background-color: #ff5252;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255,107,107,0.6);
+        .product-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .product-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin: 20px 0;
-        }
-        
-        .benefits {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 40px 0;
-        }
-        
-        .benefit {
             flex: 1;
-            min-width: 250px;
-            background: white;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            min-width: 300px;
             text-align: center;
         }
         
-        .benefit-icon {
-            font-size: 2.5rem;
-            color: #4a00e0;
+        .product-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .product-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 0 20px;
+        }
+        
+        .benefits {
+            background: linear-gradient(135deg, #4ECDC4, #556270);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .benefits ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .benefits li {
             margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        .benefits li:before {
+            content: "✓";
+            color: #FFD166;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
         
         .testimonials {
-            background-color: #f0f4ff;
-            padding: 30px;
-            border-radius: 15px;
             margin: 40px 0;
         }
         
         .testimonial {
-            margin: 20px 0;
-            padding: 20px;
             background: white;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial .name {
+            font-weight: bold;
+            color: #FF6B6B;
+            margin-top: 10px;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #FFD166, #FF9A3C);
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FF2D2D;
+            margin: 20px 0;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #777;
+            font-size: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #FF2D2D;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255,45,45,0.4);
+        }
+        
+        .btn:hover {
+            background: #FF0000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,45,45,0.6);
         }
         
         .guarantee {
-            background-color: #e6f9f0;
-            padding: 30px;
-            border-radius: 15px;
             text-align: center;
-            margin: 40px 0;
-            border: 2px dashed #4CAF50;
+            margin: 30px 0;
+            font-style: italic;
+            color: #777;
+        }
+        
+        .urgency {
+            background: #FF2D2D;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
         }
         
         footer {
             text-align: center;
-            margin-top: 50px;
             padding: 20px;
-            background-color: #333;
+            background: #333;
             color: white;
-            border-radius: 15px 15px 0 0;
+            margin-top: 50px;
         }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
+            .product-showcase {
+                flex-direction: column;
             }
             
-            .cta-button {
-                font-size: 1.2rem;
-                padding: 12px 25px;
+            .product-info {
+                padding: 20px 0;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Java Burn™</h1>
-        <p class="subtitle">The Revolutionary Powder That Melts Fat While You Drink Your Morning Coffee</p>
-        <img src="https://i.imgur.com/JqYeZ0L.jpg" alt="Java Burn Product" class="product-image">
-        <a href="https://hop.clickbank.net/?vendor=javaburn&affiliate=caioadm&lid=6100" class="cta-button">GET YOUR DISCOUNTED BOTTLE NOW →</a>
-        <p>Limited Time Offer - Stocks Running Low!</p>
-    </header>
+    <div class="header">
+        <h1>🔥 Java Burn - The Secret Metabolism Booster 🔥</h1>
+        <p>Discover how thousands of Americans are losing weight effortlessly by simply adding this revolutionary powder to their morning coffee!</p>
+    </div>
     
-    <section>
-        <h2>What is Java Burn?</h2>
-        <p>Java Burn is a <strong>100% natural</strong>, tasteless powder that you add to your morning coffee to <strong>boost metabolism, increase energy, and promote fat burning</strong> throughout the day. Developed by renowned nutrition experts, this revolutionary formula works with your coffee to activate your body's natural fat-burning abilities.</p>
-        
-        <div class="benefits">
-            <div class="benefit">
-                <div class="benefit-icon">⚡</div>
-                <h3>Boosts Metabolism</h3>
-                <p>Activates your body's natural fat-burning furnace to help you lose weight effortlessly</p>
-            </div>
-            <div class="benefit">
-                <div class="benefit-icon">💪</div>
-                <h3>Increases Energy</h3>
-                <p>No more afternoon crashes - experience sustained energy throughout your day</p>
-            </div>
-            <div class="benefit">
-                <div class="benefit-icon">🔥</div>
-                <h3>Burns Fat</h3>
-                <p>Clinical studies show significant fat loss when combined with your daily coffee</p>
-            </div>
-        </div>
-    </section>
-    
-    <section>
-        <h2>How Does Java Burn Work?</h2>
-        <img src="https://i.imgur.com/5zQmW9V.jpg" alt="How Java Burn Works" class="product-image">
-        <p>Java Burn contains a <strong>proprietary blend</strong> of 6 clinically-proven natural ingredients that work synergistically with the caffeine in your coffee to:</p>
-        <ul>
-            <li><strong>Activate thermogenesis</strong> - turning your body into a fat-burning machine</li>
-            <li><strong>Boost metabolic rate</strong> - helping you burn more calories at rest</li>
-            <li><strong>Balance blood sugar</strong> - reducing cravings and hunger pangs</li>
-            <li><strong>Enhance mental focus</strong> - while keeping you energized</li>
-        </ul>
-        <p>Simply <strong>mix one packet with your morning coffee</strong> - no diet changes or exercise required (though results improve with healthy habits).</p>
-        
-        <a href="https://hop.clickbank.net/?vendor=javaburn&affiliate=caioadm&lid=6100" class="cta-button">TRY JAVA BURN RISK-FREE TODAY →</a>
-    </section>
-    
-    <section class="testimonials">
-        <h2>Real People, Real Results</h2>
-        
-        <div class="testimonial">
-            <p><strong>"I lost 22 lbs in 6 weeks!"</strong></p>
-            <p>"I've tried every weight loss supplement out there. Java Burn is the only one that actually worked without making me jittery. I just added it to my morning coffee and the pounds started melting off. My energy is through the roof too!"</p>
-            <p>- Sarah J., 34, Texas ★★★★★</p>
+    <div class="container">
+        <div class="urgency">
+            ⏳ LIMITED TIME OFFER: Get 75% OFF + FREE Shipping Today Only!
         </div>
         
-        <div class="testimonial">
-            <p><strong>"Finally broke my plateau!"</strong></p>
-            <p>"After months of being stuck at the same weight despite diet and exercise, Java Burn helped me lose those last stubborn 15 pounds. My husband didn't believe it would work until he saw my results - now he's using it too!"</p>
-            <p>- Michael T., 42, Florida ★★★★★</p>
+        <div class="product-showcase">
+            <div class="product-image">
+                <img src="https://images.clickbank.com/img/javaburn/javaburn-bottle.png" alt="Java Burn Supplement">
+            </div>
+            <div class="product-info">
+                <h2>Burn Fat While You Enjoy Your Morning Coffee</h2>
+                <p>Java Burn is a tasteless, odorless formula that when added to your coffee, can help boost your metabolism, increase energy levels, and promote fat burning throughout the day.</p>
+                
+                <div class="benefits">
+                    <h2>Why Java Burn Works</h2>
+                    <ul>
+                        <li>100% Natural Ingredients</li>
+                        <li>No Diet or Exercise Required</li>
+                        <li>Increases Energy Without Jitters</li>
+                        <li>Supports Healthy Metabolism</li>
+                        <li>Easy to Use - Just Mix With Coffee</li>
+                        <li>Manufactured in FDA-Registered Facility</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </section>
-    
-    <section>
-        <h2>Why Choose Java Burn?</h2>
-        <ul>
-            <li><strong>100% Natural Ingredients</strong> - No artificial fillers or stimulants</li>
-            <li><strong>No Taste, No Hassle</strong> - Mixes completely with your coffee</li>
-            <li><strong>Made in USA</strong> - In an FDA-registered facility</li>
-            <li><strong>Fast-Acting Formula</strong> - Noticeable results in days</li>
-            <li><strong>Works For Everyone</strong> - Men and women of all ages</li>
-        </ul>
         
-        <img src="https://i.imgur.com/8Kj3LfZ.jpg" alt="Java Burn Ingredients" class="product-image">
-    </section>
-    
-    <section class="guarantee">
-        <h2>Our Iron-Clad 60-Day Money Back Guarantee</h2>
-        <p>We're so confident you'll love Java Burn that we offer a <strong>full 60-day money-back guarantee</strong>. If you don't experience increased energy and noticeable fat loss, simply contact us for a full refund - no questions asked.</p>
-        <p><strong>You risk nothing - but stand to lose everything (especially those extra pounds)!</strong></p>
-    </section>
-    
-    <section style="text-align: center;">
-        <h2>Ready to Transform Your Body?</h2>
-        <p>Don't wait - supplies are limited and this special discount won't last forever!</p>
-        <img src="https://i.imgur.com/JqYeZ0L.jpg" alt="Java Burn Package" class="product-image">
-        <a href="https://hop.clickbank.net/?vendor=javaburn&affiliate=caioadm&lid=6100" class="cta-button">GET JAVA BURN NOW →</a>
-        <p><em>Special Offer: Buy 3 Get 1 FREE + Free Shipping Today!</em></p>
-    </section>
+        <div class="testimonials">
+            <h2 style="text-align: center;">Real People, Real Results</h2>
+            
+            <div class="testimonial">
+                <p>"I've lost 28 pounds in 3 months without changing anything except adding Java Burn to my coffee every morning. This product is a game-changer!"</p>
+                <div class="name">- Sarah J., Miami</div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"At 52, I thought my metabolism was gone forever. Java Burn helped me drop 2 dress sizes and I have more energy than I did in my 30s!"</p>
+                <div class="name">- Linda R., Dallas</div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"As a busy mom, I don't have time for diets or gyms. Java Burn made weight loss effortless. I'm down 15 pounds and feel amazing!"</p>
+                <div class="name">- Jessica T., Chicago</div>
+            </div>
+        </div>
+        
+        <div class="cta">
+            <h2>Start Your Weight Loss Journey Today!</h2>
+            <p>Special Limited Time Offer:</p>
+            <div class="price">$49 <span class="old-price">$199</span></div>
+            <p>+ FREE Shipping</p>
+            <a href="https://hop.clickbank.net/?vendor=javaburn&affiliate=caioadm&lid=6100" class="btn">GET YOUR DISCOUNT NOW!</a>
+            <p>Risk-Free 60-Day Money Back Guarantee</p>
+            
+            <div class="urgency">
+                ⚠️ WARNING: Stock is running out due to high demand!
+            </div>
+        </div>
+        
+        <div class="guarantee">
+            <img src="https://images.clickbank.com/img/guarantee.png" alt="60 Day Guarantee" style="max-width: 100px;">
+            <p>Your order is protected by our 100% satisfaction guarantee. If you're not amazed by your results, simply contact us for a full refund.</p>
+        </div>
+    </div>
     
     <footer>
         <p>© 2023 Java Burn. All Rights Reserved.</p>
-        <p><a href="#" style="color: white;">Privacy Policy</a> | <a href="#" style="color: white;">Terms of Service</a> | <a href="#" style="color: white;">Contact Us</a></p>
+        <p><a href="#" style="color: #FFD166;">Privacy Policy</a> | <a href="#" style="color: #FFD166;">Terms of Service</a> | <a href="#" style="color: #FFD166;">Contact Us</a></p>
         <p><small>Disclaimer: These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary from person to person.</small></p>
     </footer>
 </body>
