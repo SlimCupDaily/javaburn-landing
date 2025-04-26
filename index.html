@@ -1,8 +1,3 @@
-# Agora vamos criar uma estrutura ainda mais simples para garantir que o usuário consiga fazer deploy fácil.
-from zipfile import ZipFile
-
-# Criar novo index.html direto
-simple_html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,17 +39,3 @@ simple_html_content = """
 
 </body>
 </html>
-"""
-
-# Salvar novo index
-simple_html_path = '/mnt/data/index.html'
-with open(simple_html_path, 'w') as file:
-    file.write(simple_html_content)
-
-# Criar um ZIP só com esse arquivo
-simple_zip_path = '/mnt/data/landing_simple.zip'
-with ZipFile(simple_zip_path, 'w') as zipf:
-    zipf.write(simple_html_path, arcname='index.html')
-
-simple_zip_path
-
